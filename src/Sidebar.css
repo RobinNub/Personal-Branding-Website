@@ -1,0 +1,103 @@
+/* Base styles for the sidebar */
+.sidebar {
+  position: fixed;
+  top: 10px;
+  right: 0;
+  width: 300px;
+  height: 500px;
+  transform: translateX(350px);
+  transition: transform 0.5s ease, background 0.5s ease;
+  z-index: 1000;
+}
+
+.sidebar.open {
+  transform: translateX(0);
+}
+
+.sidebar-toggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  color: #C09759;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 1001;
+  padding: 5px;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+.sidebar-toggle[aria-expanded="true"] {
+  /* Styles specifically for the cross icon */
+  color:#C09759;; /* Example: change color to red */
+  font-size: 28px; /* Example: make it slightly bigger */
+}
+.home{
+  background-color:  #ccc;
+  height: 70px;
+}
+.AB{
+  background-color:  #fff;
+  height: 70px;
+}
+.Inves{
+  background-color:  #ccc;
+  height: 70px;
+}
+.WWM {
+  background-color:  #fff;
+  height: 70px;
+}
+.EA{
+  background-color:  #ccc;
+  height: 70px;
+}
+.S{
+  background-color:  #fff;
+  height: 70px;
+}
+.sidebar-nav {
+  padding: 60px 20px 20px;
+  text-align: center;
+  opacity: 1;
+  font-weight: 450;
+
+}
+
+.sidebar-nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar-nav ul li a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.3s ease;
+  display: flex;             /* Enable flexbox for the link */
+  align-items: center;      /* Vertically center the text within the link */
+  justify-content: center;   /* Horizontally center the text (optional) */
+  height: 100%;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
+}
+
+.sidebar-nav ul li a:hover {
+  color:#C09759;
+  
+}
+
+/* Responsive styles for smaller screens */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 200px;
+    transform: translateX(200px);
+  }
+
+  .sidebar.open {
+    transform: translateX(0);
+  }
+
+  .sidebar-toggle {
+    right: 20px;
+  }
+}

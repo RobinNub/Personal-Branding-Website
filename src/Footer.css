@@ -1,0 +1,135 @@
+
+/* JJ Logo Styles */
+.JJlogo {
+  background-color: #d3d3d3;
+  text-align: center;
+  padding: 30px 20px;
+}
+
+.JJ-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.JJ-logo-black {
+  max-width: 500px;
+  opacity: 0.1;
+  transform: rotate(-15deg);
+  margin-top: -80px;
+  margin-bottom: -35px;
+}
+
+.JJ-logo-white {
+  max-width: 150px;
+}
+
+.JJ-email {
+  font-size: 20px;
+  color: #000;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-family:'inter', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.JJ-email:hover {
+  color: #C09759;
+}
+
+/* Footer Styles */
+.footer {
+  display: flex;
+  flex-direction: column;
+  min-height: 10vh;
+}
+
+.footer-bottom {
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.footer-links a {
+  margin: 0 10px;
+  color: #333;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-family:'inter', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.footer-links a:hover {
+  color: hsl(210, 100%, 45%);
+}
+
+/* Social Media Icons */
+.footer-icons a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin: 0 5px;
+  overflow: hidden;
+}
+
+.footer-icons .social-icon {
+  font-size: 16px;
+  color: black;
+  filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.5)); /* Initial subtle glow */
+  transition: filter 0.3s ease;
+}
+
+.social-icon > * {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-icon:hover {
+  color:hsl(210, 100%, 45%) ;
+  filter: drop-shadow(0 0 10px hsl(210, 100%, 45%));
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  /* ... other media query styles ... */
+  .footer-bottom {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-links,
+  .footer-icons {
+    margin-top: 10px;
+    width: -moz-fit-content; /* Allow icons to wrap naturally */
+    justify-content: center;
+    width: fit-content;
+  }
+}
+
+@media (max-width: 480px) { 
+  .JJlogo {
+    padding: 15px 10px; 
+  }
+
+  .JJ-logo-black {
+    max-width: 150px; 
+    margin-top: -40px; 
+    margin-bottom: -20px; 
+  }
+
+  .JJ-logo-white {
+    max-width: 60px;
+  }
+}

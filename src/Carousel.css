@@ -1,0 +1,132 @@
+.carousel-container {
+  width: 100%; 
+  height: 600px; 
+  position: relative; 
+  overflow: hidden;
+}
+
+.carousel-slide {
+  position: relative;
+  height: 100%; 
+  background-color: #f0f0f0; 
+}
+
+.carousel-image {
+  width: 100%;
+  height: 600px; 
+  object-fit: cover;  
+  filter: brightness(0.5); 
+}
+
+.carousel-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 50%; /* Adjusted width for better content fit */
+  max-width: 800px;
+  z-index: 2; 
+  display: flex; 
+  flex-direction: column; 
+  align-items: center;   
+  justify-content: center; 
+}
+
+/* Added text-shadow to h3 and p for visibility */
+.carousel-content h3, .carousel-content p {
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8); 
+}
+
+.carousel-content h3 {
+  font-size: 2rem; 
+  font-family: "Calibri", sans-serif; 
+  font-weight: bold;
+  margin-bottom: 1rem;
+
+}
+
+/* Adjusted description styling */
+.carousel-content p {
+  font-size: 1rem; 
+  font-family: "Calibri", sans-serif; 
+  font-weight: normal;
+  line-height: 1.4; 
+  margin-bottom: 1rem; 
+  display: -webkit-box; /* Enable multi-line clamping in WebKit browsers */
+  -webkit-line-clamp: 3; /* Limit to 3 lines */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Slick Dots Styling */
+.slick-dots {
+  position: absolute; 
+  bottom: 20px;   
+  width: 100%;
+  text-align: center; 
+  z-index: 1;  
+}
+
+.slick-dots li {
+  margin: 0 5px;
+}
+
+.slick-dots li button:before {
+  color: #C09759 !important;  
+  font-size: 12px;
+  opacity: 0.75; 
+  transition: opacity 0.3s;
+}
+
+
+.slick-dots li.slick-active button:before,
+.slick-dots li button:hover:before {
+  opacity: 1; 
+}
+
+
+/* Media query for smaller screens */
+@media (max-width: 768px) { 
+  .carousel-image {
+    height: auto; 
+  }
+  
+  .carousel-container { 
+      height: 500px; /* Adjust carousel height on smaller screens */
+    }
+  
+  .carousel-image { 
+      height: 500px; /* Adjust image height on smaller screens */
+    }
+
+  /* Adjust content width for smaller screens */
+  .carousel-content {
+    padding: 10px;
+    width: 90%; 
+  }
+
+  .carousel-content h3 {
+    font-size: 1.8rem;
+  }
+
+  .carousel-content p {
+    font-size: 0.9rem;
+  }
+}
+
+/* Styles for the "JJ Singh" title */
+
+.carousel-title {
+  position: absolute;
+  top: 20px;       
+  left: 20px;
+  height: auto;
+  width: 150px;
+  z-index: 3;      
+  transform: rotate(-15deg); 
+
+}
